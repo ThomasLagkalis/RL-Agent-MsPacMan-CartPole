@@ -27,6 +27,8 @@ For now in order to run the specify which agant to run you have to edit the driv
 python3 driver_code.py
 ```
 
+If you want to edit the hyperparameters you can find them in drive_code.py and agent.py. In future commits will add feature selection with args.
+
 ## Results 
 
 After you run the programm the results i.e. the graphs and an inscance of the agent navigating the environment are saved in ./visual
