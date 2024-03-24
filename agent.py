@@ -264,7 +264,7 @@ class DQN_Agent:
             model.add(Conv2D(64, (3, 3), strides=1, padding='same'))
             model.add(Activation('relu'))
             model.add(Flatten())
-            mmodel.add(Dense(32,input_dim=self.stateDimension,activation='relu'))
+            model.add(Dense(32,input_dim=self.stateDimension,activation='relu'))
             model.add(Dense(32,activation='relu'))
             model.add(Dense(self.actionDimension,activation='linear'))
             model.compile(loss='mse', optimizer=Adam())
@@ -309,7 +309,7 @@ class DQN_Agent:
             
             for state, action, reward, next_state, done in miniBatch:
                 if not done:
-                    target_Q = reward + self.gamma * np.amax(self.targetNet.predict(next_state)[0], verbose=0)
+                    target_Q = reward + self.gamma * np.amax(self.targetNet.predict(next_state, verbose=0)[0])
                 else:
                     target_Q = reward
 

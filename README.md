@@ -21,13 +21,28 @@ After you have installed all dependencies you can either download the .zip file 
 git clone https://github.com/ThomasLagkalis/RL-Agent-MsPacMan-CartPole.git
 ```
 
-For now in order to run the specify which agant to run you have to edit the driver_code.py. 
+By running the following command (with the deafault parameters) it will run at the Ms Pac Man environment for 3000 episodes
 
 ```console 
 python3 driver_code.py
 ```
 
-If you want to edit the hyperparameters you can find them in drive_code.py and agent.py. In future commits will add feature selection with args.
+To show all the available options you can run the following command:
+```console
+python3 driver_code.py --help
+```
+
+To run the cart pole environment add the following option:
+```console
+python3 driver_code.py --cartpole
+```
+
+To specify the duration (number of episodes) of the training process add the -d EPISODES argument. For example:
+```console
+python3 driver_code.py --cartpole -e 1000
+```
+
+If you want to edit the hyperparameters you can find them in drive_code.py (epsilon, gamma and alpha) and agent.py (minibatch size etc.).
 
 ## Results 
 
