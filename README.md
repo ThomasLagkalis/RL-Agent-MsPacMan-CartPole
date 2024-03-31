@@ -37,7 +37,7 @@ To run the cart pole environment add the following option:
 python3 driver_code.py --cartpole
 ```
 
-To specify the duration (number of episodes) of the training process add the -d EPISODES argument. For example:
+To specify the duration (number of episodes) of the training process add the -e EPISODES argument. For example:
 ```console
 python3 driver_code.py --cartpole -e 1000
 ```
